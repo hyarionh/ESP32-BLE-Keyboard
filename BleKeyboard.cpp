@@ -141,7 +141,7 @@ void BleKeyboard::begin(void)
   advertising = pServer->getAdvertising();
   advertising->setAppearance(HID_KEYBOARD);
   advertising->addServiceUUID(hid->hidService()->getUUID());
-  advertising->setScanResponse(false);
+  advertising->setScanResponse(true);
   advertising->start();
   hid->setBatteryLevel(batteryLevel);
 
